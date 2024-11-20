@@ -24,13 +24,13 @@ export class DbzService {
 
 
 
-  onNewCharacter(character: Character):void{
+  addCharacter(character: Character):void{
     character.id = uuid();
     console.log('nuevo caracter: ',character);
     this.characters.push(character);
   }
 
-  onDeleteCharacter(id: string):void{
+  onDeleteCharacterById(id: string):void{
 
     const index = this.characters.findIndex((element) => element.id === id);
     console.log(`se elimina el id ${id} tiene indice ${index}`);
